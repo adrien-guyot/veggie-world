@@ -47,7 +47,11 @@
             1
         ],
         "author": "Chichimiaou",
-        "ingredients": "[1kg de patates, beaucoup d'array, 1 gros saucisson]",
+        "ingredients": [
+            "1kg de patates",
+            "beaucoup d'array",
+            "1 gros saucisson"
+        ],
         "directions": "Mettre les 160 g de lentilles dans 4 fois leur volume d'eau. <br> Ajouter 1 cube de bouquet garnis ou un bouquet garni frais. <br> Une fois que l'eau commence à bouillonner, y ajouter les saucisses de Toulouse et Francfort en ayant soin de les piquer un peu pour qu'elles ne s'éclatent pas en cuisant. <br> Laisser cuire 20 à 25 minutes, ne pas hésiter à goûter les lentilles pour se rendre compte de leur cuisson. <br> C'est prêt, bon appétit.",
         "rating": [
             2

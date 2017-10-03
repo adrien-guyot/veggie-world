@@ -1,3 +1,8 @@
-<p>
-  recipes-list works!
-</p>
+<h2>Liste des recettes</h2>
+<div *ngFor="let recipe of recipes">
+  <h3>{{ recipe.title }}</h3>
+  <p>{{ recipe.mealType }}</p>
+  <ul>
+    <li *ngFor="let ingredient of recipe.ingredients">{{ ingredient }}</li>
+  </ul>
+</div>
