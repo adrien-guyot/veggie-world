@@ -10,6 +10,8 @@
       "assets": [
         "assets",
         "images",
+        "data",
+        "bootstrap",
         "favicon.ico"
       ],
       "index": "index.html",
@@ -20,9 +22,12 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app-vw",
       "styles": [
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "styles.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/bootstrap/dist/js/bootstrap.min.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
