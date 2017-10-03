@@ -1,0 +1,76 @@
+[
+    {
+        "id": "1",
+        "title": "Burger Végétarien",
+        "mealType": "[déjeuner, diner]",
+        "prepDuration": "30mn",
+        "cookDuration": "1h",
+        "servings": "[4, 5]",
+        "author": "Mookie", 
+        "ingredients": "[4/5 feuilles de salade, 1 tomate, 4/5 pains à hamburger, 4/5 tranches de fromage à hamburger, sauce à burger (la Amora est top) ou mayonnaise et ketchup, 200gr petits pois, 200g de maïs (200 g), 1 oignon, 1 oeuf, 2 cuillères à soupe de farine, chapelure, épices (sel, poivre, paprika, cumin, curry...)]",
+        "directions": "Passez au mixeur les petits pois, le maïs, l'oignon (coupé en 4 ) et l'oeuf. \r\n Puis ajoutez au mélange les épices, la farine et de la chapelure jusqu'à l'obtention d'une pâte épaisse (pour pouvoir former des galettes).  \r\n  Formez des galettes dans une poêle chaude avec un peu d'huile. Laissez cuire environ 15 mn à feux moyen. Avant de les retirer du feux, déposez les tranches de fromage pour qu'elles fondent un peu.  \r\n  Vous pouvez ensuite composer vos hamburgers avec le pain la salades, les tranches de tomates, les sauces et la galette.",
+        "rating": "[5]"
+    },
+    {
+        "id": "2",
+        "title": "patates à l'array",
+        "mealType": "[déjeuner, diner]",
+        "prepDuration": "5sec",
+        "cookDuration": "1mn",
+        "servings": "[1]",
+        "author": "Chichimiaou",         
+        "ingredients": "[1kg de patates, beaucoup d'array, 1 gros saucisson]",
+        "directions": "Mettre les 160 g de lentilles dans 4 fois leur volume d'eau. Ajouter 1 cube de bouquet garnis ou un bouquet garni frais. Une fois que l'eau commence à bouillonner, y ajouter les saucisses de Toulouse et Francfort en ayant soin de les piquer un peu pour qu'elles ne s'éclatent pas en cuisant. Laisser cuire 20 à 25 minutes, ne pas hésiter à goûter les lentilles pour se rendre compte de leur cuisson. C'est prêt, bon appétit.",
+        "rating": "[2]"
+    },
+    {
+        "id": "3",
+        "title": "Parmentier de patates douces aux lentilles(Pour 4 personnes)",
+        "mealType": "[déjeuner, diner]",
+        "prepDuration": "15mn",
+        "cookDuration": "25mn",
+        "author": "Mookie",         
+        "ingredients": "[200 g de lentilles vertes, 1.5 kg de patates douces, 2 c. à s. d'huile d'olive, 2 échalotes, 2 gousses d'ail, 1 c. à s. de ciboulette ciselée,2 c. à s. de persil haché, 2 c. à s. de tamari, 100 ml de crème de soja (ou de riz, au choix), 2 c. à s. de levure maltée, Sel, poivre]",
+        "directions": "Cuire les lentilles dans une casserole remplie d'eau pendant 20 minutes. <br>
+        Éplucher et couper en morceaux les patates douces, puis les cuire dans une grande casserole remplie d'eau. <br>
+        Faire chauffer l'huile d'olive dans une poêle, puis y faire revenir les échalotes et l'ail émincés. Ajouter les lentilles égouttées, les herbes et le tamari. <br>
+        Cuire pendant 5 à 10 minutes. Répartir dans le fond d'un plat à gratin. <br>
+        Egoutter les patates douces, puis les passer au presse-purée et assaisonner. <br>
+        Etaler cette purée sur les lentilles et bien tasser. <br>
+        Répartir la crème dessus et saupoudrer de levure maltée. <br>
+        Cuire15 minutes à180 oc (th.6), puis passer quelques minutes sous le gril pour gratiner. <br>
+        <br>
+        Bon appétit !",
+        "rating": "[3]"
+},
+{
+    "id": "4",
+    "title": "Gâteau aux carottes végétalien",
+    "mealType": "[dessert]",
+    "prepDuration": "25mn",
+    "cookDuration": "45mn",
+    "author": "Mookie",     
+    "ingredients": "[200 g de farine, 1 sachet et demi de levure chimique, 180 g de cassonade, 10 cl d'huile végétale, 12.5 cl de lait de soja ou d'amandes, 300 g de carottes râpées, 60 g de noix de pécan concassées, 1 cuillère à café de cannelle en poudre (ou une et demie si vous aimez quand c'est plus prononcé), 0.5 cuillère à café de gingembre, 1 zeste de citron (vous pouvez ajouter le jus d'un demi citron, selon les goûts)]",
+    "directions": "Préchauffer le four à 150°C (thermostat 5).<br>
+    Mélanger la farine, levure, sucre, huile, lait de soja (ou d'amande), épices et citron, puis ajouter les noix et les carottes.<br>
+    Mélanger le tout et verser dans un moule huilé.<br>
+    Enfourner et laisser cuire 45 à 55 minutes. Vérifier la cuisson en piquant un couteau fin dans le gâteau : il ne doit pas y avoir de pâte collée à la lame.",
+    "rating": "[4]"
+},
+{
+    "id": "5",
+    "title": "Croissants au Kinder",
+    "mealType": "[dessert]",
+    "prepDuration": "10mn",
+    "cookDuration": "25mn",
+    "author": "Mookie",     
+    "ingredients": "[1 pâte feuilletée prête-à-l'emploi, des Kinder maxi, 1 œuf pour la dorure]",
+    "directions": "Déroulez la pâte et coupez le cercle en deux.<br>
+    Découpez chaque partie de la pâte en trois triangle (vous devriez alors en obtenir 6 au total).<br>
+    Mettre le Kinder maxi en morceau dans la base la plus large du triangle, pour rouler.<br>
+    Mettre les croissants sur une plaque avec du papier cuisson et les badigeonner avec un œuf battu à l'aide d'un pinceau en silicone.<br>
+    Laisser reposer 30 minutes .<br>
+    Mettre à cuire 15 à 20 minutes dans un four préalablement préchauffé à 200 °C.",
+    "rating": "[4]"
+}
+]

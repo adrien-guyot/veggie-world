@@ -4,6 +4,8 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { RecipesListComponent } from './recipes-list/recipes-list.component';
+import { SearchComponent } from './search/search.component';
 
 const routes = [
   {path: '', component: HomeComponent }
@@ -12,7 +14,9 @@ const routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    RecipesListComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
