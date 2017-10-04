@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Http } from '@angular/http';
-import 'rxjs/add/operator/map';
+import { RecipesService } from './../services/recipes.service';
 
 @Component({
   selector: 'app-vw-recipes-list',
@@ -9,17 +8,20 @@ import 'rxjs/add/operator/map';
 })
 export class RecipesListComponent implements OnInit {
 
-recipes = [];
+  recipes = [];
+  error = '';
 
-  constructor(private http: Http) { }
+  constructor(private _recipesService: RecipesService) { }
 
   ngOnInit() {
-    this.http.get('data/recipes.json')
-             .map(res => {
-               console.log(res.json());
-               this.recipes = res.json();
-              })
-             .subscribe();
+    this._recipesService.getRecipes()
+                        .subscribe(
+                        data => this.recipes = data,
+                        error => {
+                          console.error(error);
+                          this.error = error;
+                          }
+                        )
   }
 
 }
