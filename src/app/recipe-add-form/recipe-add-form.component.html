@@ -1,3 +1,98 @@
-<p>
-  recipe-add-form works!
-</p>
+<h1>Proposez votre recette !</h1>
+
+<div class="autocenter">
+  <form [formGroup]="form" (ngSubmit)="createRecipe()">
+    <div class="fields-container">
+      <label for="title">Titre</label>
+      <input type="text"
+             name="title"
+             class=""
+             placeholder="Titre de votre recette"
+             formControlName="title">
+    </div>  
+
+    <div class="fields-container">
+      <label for="mealType">Type de recette</label>
+      <select class="" 
+            name="mealType"
+            formControlName="mealType">
+        <option value="" disabled selected>Sélectionnez le type de recette</option>  
+        <option *ngFor="let mealType of mealTypes" [value]="mealType.value">{{ mealType.name }}</option>
+      </select>
+    </div>
+
+    <div class="fields-container">
+      <label for="diffLevel">Difficulté</label>
+      <select class="" 
+            name="diffLevel"
+            formControlName="diffLevel">
+        <option value="" disabled selected>Sélectionnez le niveau de difficulté</option>              
+        <option *ngFor="let diffLevel of diffLevels" [value]="diffLevel.value">{{ diffLevel.name }}</option>
+      </select>
+    </div>
+
+    <div class="fields-container">
+      <label for="prepduration">Durée de la préparation : </label>
+      <select name="prepduration" class="numbers-selection" formControlName="prepdurationhour">
+        <option *ngFor="let key of 24 | formRecipe" value="{{key}}">{{key}}</option>
+      </select><span> H</span>
+
+      <select name="prepduration" class="numbers-selection" formControlName="prepdurationmin">
+        <option *ngFor="let key of 60 | formRecipe" value="{{key}}">{{key}}</option>
+      </select><span> MN</span>
+    </div>
+
+    <div class="fields-container">
+      <label for="cookduration">Temps de cuisson : </label>
+      <select name="prepduration" class="numbers-selection" formControlName="cookdurationhour">
+        <option *ngFor="let key of 24 | formRecipe" value="{{key}}">{{key}}</option>
+      </select><span> H</span>
+      <select name="prepduration" class="numbers-selection" formControlName="cookdurationmin">
+        <option *ngFor="let key of 60 | formRecipe" value="{{key}}">{{key}}</option>
+      </select><span> MN</span>
+    </div>
+
+    <div class="fields-container">
+      <label for="standindTime">Temps de repos : </label>
+      <select name="standindTime" class="numbers-selection" formControlName="standindTimehour">
+        <option *ngFor="let key of 24 | formRecipe" value="{{key}}">{{key}}</option>
+      </select><span> H</span>
+      <select name="standindTime" class="numbers-selection" formControlName="standindTimemin">
+        <option *ngFor="let key of 60 | formRecipe" value="{{key}}">{{key}}</option>
+      </select><span> MN</span>
+    </div>
+
+    <div class="fields-container">
+      <label for="servings">Nombre de parts / personnes</label>
+      <input type="number"
+            name="servings"
+            class=""
+            placeholder="1"
+            min="0" 
+            formControlName="servings">      
+    </div>
+
+    <div class="fields-container">
+      <label for="ingredients">Ingredients</label>
+      <input type="text"
+            name="ingredients"
+            class="form-control"
+            placeholder="1"
+            formControlName="ingredients">
+    </div>
+
+    <div class="fields-container">
+    <label for="directions">Préparation</label>
+    <textarea name="directions" 
+              formControlName="directions"></textarea>        
+    </div>
+
+    <button type="submit" class="btn btn-primary">Proposer ma recette</button>
+  </form>
+</div>
+
+<!-- <div formArrayName="properties">
+    <div *ngFor="let prop of searchForm.get('properties').controls; let i=index">
+      <input type="text" class="form-control" [formControlName]="i">
+    </div>
+  </div> -->

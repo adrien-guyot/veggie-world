@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { RecipesListComponent } from './recipes-list/recipes-list.component';
 import { SearchComponent } from './search/search.component';
 import { RecipeAddFormComponent } from './recipe-add-form/recipe-add-form.component';
+import { FormRecipePipe } from './pipes/form-recipe.pipe';
 
 
 const routes = [
@@ -23,7 +24,8 @@ const routes = [
     HomeComponent,
     RecipesListComponent,
     SearchComponent,
-    RecipeAddFormComponent
+    RecipeAddFormComponent,
+    FormRecipePipe
   ],
   imports: [
     BrowserModule,
