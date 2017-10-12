@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';    // c'est grâce au formBuilder que l'on créé les formGroup
+// c'est grâce au formBuilder que l'on créé les formGroup
+import { FormBuilder, FormGroup, Validators, FormArray, FormControl } from '@angular/forms';
 import { FormRecipePipe } from './../pipes/form-recipe.pipe';
 import { Ingredient, Recipe } from './../data-model';
 
@@ -13,7 +14,7 @@ export class RecipeAddFormComponent implements OnInit {
   /*************** REACTIVE FORM ***************/
   recipeForm: FormGroup;
 
-  ingredientsForm: FormGroup;
+  recipe: Recipe;
 
   mealTypes = [
     { id: 1, name: 'Entrée', value: 'starter' },
@@ -92,7 +93,7 @@ export class RecipeAddFormComponent implements OnInit {
     });
 
     // this.recipeForm.setValue({
-    //   ingredients: this.ingredientsList[0] || new Ingredient()
+    //   ingredients: this.recipe.ingredients[0] || new Ingredient()
     // });
   }
 
@@ -100,10 +101,12 @@ export class RecipeAddFormComponent implements OnInit {
     console.log(this.recipeForm.value);
   }
 
-  addIngredientToIngredientsList() {
-    // for(let i = 1; i <= 4; i++) {
-    //   (<FormArray>this.ingredientsForm.get('properties')).push(new FormControl());
-    // }
-  }
+  // createIngredientForm() {
+  //   (<FormArray>this.recipeForm.get('ingredients')).push(new FormControl());
+  // }
+
+  // addIngredientToIngredientsList() {
+
+  // }
 
 }
