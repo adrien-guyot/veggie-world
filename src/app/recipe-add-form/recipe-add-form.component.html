@@ -76,7 +76,7 @@
       <div class="btn btn-success add-ingredient" (click)="addIngredientToIngredientsList()"><span>Ajouter un ingrédient </span><i class="glyphicon glyphicon-plus"></i></div>
     </div>
 
-    <div formGroupName="ingredient" class="well well-lg">
+    <div formGroupName="ingredients" class="well well-lg">
       <h4 class="text-center">Ajouter un ingrédient</h4>
       <div class="form-group">
         <label class="center-block">Quantité:
@@ -137,3 +137,4 @@
 
 <p>Form Value : {{ recipeForm.value | json }}</p>
 <p>Form Status : {{ recipeForm.status | json }}</p>
+<p>Ingredients name : {{ recipeForm.get('ingredients.name').value }}</p>

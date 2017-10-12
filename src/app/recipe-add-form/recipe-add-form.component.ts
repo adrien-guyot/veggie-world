@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';    // c'est grâce au formBuilder que l'on créé les formGroup
 import { FormRecipePipe } from './../pipes/form-recipe.pipe';
+import { Ingredient, Recipe } from './../data-model';
 
 @Component({
   selector: 'app-vw-recipe-add-form',
@@ -13,8 +14,6 @@ export class RecipeAddFormComponent implements OnInit {
   recipeForm: FormGroup;
 
   ingredientsForm: FormGroup;
-
-  ingredientsList = [];
 
   mealTypes = [
     { id: 1, name: 'Entrée', value: 'starter' },
@@ -88,15 +87,13 @@ export class RecipeAddFormComponent implements OnInit {
       standingTimeMin: '',
       servings: '',
       author: '',
-      ingredient: this.formBuilder.group({      // <-- Child FormGroup
-        quantity: '',
-        unit: '',
-        option: '',
-        name: '',
-        spec: '',
-      }),
+      ingredients: this.formBuilder.group(new Ingredient()),  // <-- a FormGroup with a new ingredient
       directions: '',
     });
+
+    // this.recipeForm.setValue({
+    //   ingredients: this.ingredientsList[0] || new Ingredient()
+    // });
   }
 
   createRecipe() {
