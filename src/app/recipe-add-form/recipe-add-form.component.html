@@ -1,7 +1,7 @@
 <h1>Proposez votre recette !</h1>
 
 <div class="autocenter">
-  <form [formGroup]="form" (ngSubmit)="createRecipe()">
+  <form [formGroup]="recipeForm" (ngSubmit)="createRecipe()">
     <div class="fields-container">
       <label for="title">Titre</label>
       <input type="text"
@@ -32,32 +32,32 @@
     </div>
 
     <div class="fields-container">
-      <label for="prepduration">Durée de la préparation : </label>
-      <select name="prepduration" class="numbers-selection" formControlName="prepdurationhour">
+      <label for="prepDuration">Durée de la préparation : </label>
+      <select name="prepDuration" class="numbers-selection" formControlName="prepDurationHour">
         <option *ngFor="let key of 24 | formRecipe" value="{{key}}">{{key}}</option>
       </select><span> H</span>
 
-      <select name="prepduration" class="numbers-selection" formControlName="prepdurationmin">
+      <select name="prepDuration" class="numbers-selection" formControlName="prepDurationMin">
         <option *ngFor="let key of 60 | formRecipe" value="{{key}}">{{key}}</option>
       </select><span> MN</span>
     </div>
 
     <div class="fields-container">
-      <label for="cookduration">Temps de cuisson : </label>
-      <select name="prepduration" class="numbers-selection" formControlName="cookdurationhour">
+      <label for="cookDuration">Temps de cuisson : </label>
+      <select name="prepDuration" class="numbers-selection" formControlName="cookDurationHour">
         <option *ngFor="let key of 24 | formRecipe" value="{{key}}">{{key}}</option>
       </select><span> H</span>
-      <select name="prepduration" class="numbers-selection" formControlName="cookdurationmin">
+      <select name="prepDuration" class="numbers-selection" formControlName="cookDurationMin">
         <option *ngFor="let key of 60 | formRecipe" value="{{key}}">{{key}}</option>
       </select><span> MN</span>
     </div>
 
     <div class="fields-container">
-      <label for="standindTime">Temps de repos : </label>
-      <select name="standindTime" class="numbers-selection" formControlName="standindTimehour">
+      <label for="standingTime">Temps de repos : </label>
+      <select name="standingTime" class="numbers-selection" formControlName="standingTimeHour">
         <option *ngFor="let key of 24 | formRecipe" value="{{key}}">{{key}}</option>
       </select><span> H</span>
-      <select name="standindTime" class="numbers-selection" formControlName="standindTimemin">
+      <select name="standingTime" class="numbers-selection" formControlName="standingTimeMin">
         <option *ngFor="let key of 60 | formRecipe" value="{{key}}">{{key}}</option>
       </select><span> MN</span>
     </div>
@@ -73,13 +73,57 @@
     </div>
 
     <div class="fields-container">
-      <label for="ingredients">Ingredients</label>
-      <input type="text"
-            name="ingredients"
-            class="form-control"
-            placeholder="1"
-            formControlName="ingredients">
+      <div class="btn btn-success add-ingredient" (click)="addIngredientToIngredientsList()"><span>Ajouter un ingrédient </span><i class="glyphicon glyphicon-plus"></i></div>
     </div>
+
+    <div formGroupName="ingredient" class="well well-lg">
+      <h4 class="text-center">Ajouter un ingrédient</h4>
+      <div class="form-group">
+        <label class="center-block">Quantité:
+          <input class="form-control" formControlName="quantity">
+        </label>
+      </div>
+      <div class="form-group">
+        <label class="center-block">Unité de mesure:
+          <select class="" 
+          name="unit"
+          formControlName="unit">
+            <option *ngFor="let unitOfMeasure of unitsOfMeasure" [value]="unitOfMeasure.value">{{ unitOfMeasure.name }}</option>
+          </select>
+        </label>
+      </div>
+      <div class="form-group">
+        <label class="center-block">Options:
+          <select class="" 
+          name="option"
+          formControlName="option">
+            <option *ngFor="let ingOption of ingOptions" [value]="ingOption.name">{{ ingOption.name }}</option>
+          </select>
+        </label>
+      </div>
+      <div class="form-group">
+        <label class="center-block">Nom de l'ingrédient:
+          <input class="form-control" formControlName="name">          
+        </label>
+      </div>
+      <div class="form-group">
+        <label class="center-block">Options complémentaires:
+          <select class="" 
+          name="spec"
+          formControlName="spec">
+            <option *ngFor="let spec of ingSpec" [value]="spec.name">{{ spec.name }}</option>
+          </select>
+        </label>
+      </div>
+      <button class="btn btn-primary"><i class="glyphicon glyphicon-ok"></i> Ajouter</button>
+      <button class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i> Supprimer</button>
+    </div>
+
+    <!-- <div formArrayName="properties">
+    <div *ngFor="let prop of searchForm.get('properties').controls; let i=index">
+      <input type="text" class="form-control" [formControlName]="i">
+    </div>
+  </div> -->
 
     <div class="fields-container">
     <label for="directions">Préparation</label>
@@ -91,8 +135,5 @@
   </form>
 </div>
 
-<!-- <div formArrayName="properties">
-    <div *ngFor="let prop of searchForm.get('properties').controls; let i=index">
-      <input type="text" class="form-control" [formControlName]="i">
-    </div>
-  </div> -->
+<p>Form Value : {{ recipeForm.value | json }}</p>
+<p>Form Status : {{ recipeForm.status | json }}</p>

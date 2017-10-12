@@ -37,3 +37,7 @@ select.numbers-selection{
 .fields-container{
     padding-bottom: 15px;
 }
+
+.add-ingredient i{
+    padding-left: 1em;
+}
