@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 // c'est grâce au formBuilder que l'on créé les formGroup
 import { FormBuilder, FormGroup, Validators, FormArray, FormControl } from '@angular/forms';
-import { FormRecipePipe } from './../pipes/form-recipe.pipe';
+
 import { Ingredient, Recipe } from './../data-model';
+import { FormRecipePipe } from './../pipes/form-recipe.pipe';
+import { RecipesService } from './../services/recipes.service';
 
 @Component({
   selector: 'app-vw-recipe-add-form',
@@ -53,6 +55,13 @@ export class RecipeAddFormComponent implements OnInit {
     { id: 13, name: 'seché(es)' }
   ];
 
+  ingCat = [
+    {id: 1, name: 'fruits, légumes et légumineux', value: 1},
+    {id: 2, name: 'divers', value: 2},
+    {id: 3, name: 'fromages', value: 3},
+    {id: 4, name: 'alcool', value: 4}
+  ]
+
   unitsOfMeasure = [
     { id: 1, name: 'milligramme(s)', value: 'mg' },
     { id: 2, name: 'gramme(s)', value: 'g' },
@@ -66,7 +75,7 @@ export class RecipeAddFormComponent implements OnInit {
     { id: 10, name: 'cuillère(s) à soupe', value: 'cuillère(s) à soupe' }
   ];
 
-  constructor(private formBuilder: FormBuilder) { }  // Injection du formBuilder
+  constructor(private formBuilder: FormBuilder, private _recipesService: RecipesService) { }  // Injection du formBuilder
 
 
   ngOnInit() {
@@ -97,16 +106,16 @@ export class RecipeAddFormComponent implements OnInit {
     // });
   }
 
-  createRecipe() {
-    console.log(this.recipeForm.value);
+  createRecipe(recipeData) {
+    this._recipesService.addRecipe(recipeData);
   }
 
-  // createIngredientForm() {
-  //   (<FormArray>this.recipeForm.get('ingredients')).push(new FormControl());
-  // }
+  createIngredientForm() {
+    // (<FormArray>this.recipeForm.get('ingredients')).push(new FormControl());
+  }
 
-  // addIngredientToIngredientsList() {
+  addIngredientToIngredientsList() {
 
-  // }
+  }
 
 }

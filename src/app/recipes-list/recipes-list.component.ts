@@ -22,7 +22,12 @@ export class RecipesListComponent implements OnInit {
                           this.error = error;
                                                        // 3) complete : cet état n'est pas indiqué ici car on est toujours à l'écoute
                           }
-                        )
+                        );
+
+  this._recipesService.recipesSubject.subscribe(data => {
+      console.log(data);
+      this.recipes = [data, ...this.recipes];
+    });
   }
 
 }

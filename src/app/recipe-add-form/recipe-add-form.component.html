@@ -1,19 +1,18 @@
-<h1>Proposez votre recette !</h1>
-
-<div class="autocenter">
-  <form [formGroup]="recipeForm" (ngSubmit)="createRecipe()">
-    <div class="fields-container">
+<div class="main-form row">
+  <h1 class="text-center">Proposez votre recette !</h1>
+  <form [formGroup]="recipeForm" (ngSubmit)="createRecipe(recipeForm.value)">
+    <div class="form-group">
       <label for="title">Titre</label>
       <input type="text"
              name="title"
-             class=""
+             class="form-control"
              placeholder="Titre de votre recette"
              formControlName="title">
     </div>  
 
-    <div class="fields-container">
+    <div class="form-group">
       <label for="mealType">Type de recette</label>
-      <select class="" 
+      <select class="form-control" 
             name="mealType"
             formControlName="mealType">
         <option value="" disabled selected>Sélectionnez le type de recette</option>  
@@ -21,9 +20,9 @@
       </select>
     </div>
 
-    <div class="fields-container">
+    <div class="form-group">
       <label for="diffLevel">Difficulté</label>
-      <select class="" 
+      <select class="form-control" 
             name="diffLevel"
             formControlName="diffLevel">
         <option value="" disabled selected>Sélectionnez le niveau de difficulté</option>              
@@ -31,7 +30,7 @@
       </select>
     </div>
 
-    <div class="fields-container">
+    <div class="form-group">
       <label for="prepDuration">Durée de la préparation : </label>
       <select name="prepDuration" class="numbers-selection" formControlName="prepDurationHour">
         <option *ngFor="let key of 24 | formRecipe" value="{{key}}">{{key}}</option>
@@ -42,7 +41,7 @@
       </select><span> MN</span>
     </div>
 
-    <div class="fields-container">
+    <div class="form-group">
       <label for="cookDuration">Temps de cuisson : </label>
       <select name="prepDuration" class="numbers-selection" formControlName="cookDurationHour">
         <option *ngFor="let key of 24 | formRecipe" value="{{key}}">{{key}}</option>
@@ -52,7 +51,7 @@
       </select><span> MN</span>
     </div>
 
-    <div class="fields-container">
+    <div class="form-group">
       <label for="standingTime">Temps de repos : </label>
       <select name="standingTime" class="numbers-selection" formControlName="standingTimeHour">
         <option *ngFor="let key of 24 | formRecipe" value="{{key}}">{{key}}</option>
@@ -62,17 +61,19 @@
       </select><span> MN</span>
     </div>
 
-    <div class="fields-container">
+    <div class="form-group">
       <label for="servings">Nombre de parts / personnes</label>
       <input type="number"
             name="servings"
-            class=""
+            class="form-control"
             placeholder="1"
             min="0" 
             formControlName="servings">      
     </div>
 
-    <div class="fields-container">
+    <div class="form-group">
+      <label for="ingredients">Ingredients :</label>
+      <br>      
       <div class="btn btn-success add-ingredient" (click)="createIngredientForm()"><span>Ajouter un ingrédient </span><i class="glyphicon glyphicon-plus"></i></div>
     </div>
 
@@ -115,8 +116,10 @@
           </select>
         </label>
       </div>
-      <button class="btn btn-primary"><i class="glyphicon glyphicon-ok"></i> Ajouter</button>
-      <button class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i> Supprimer</button>
+      <div class="form-group text-center">
+        <button class="btn btn-info btn-ing"><i class="glyphicon glyphicon-plus"></i></button>
+        <button class="btn btn-default btn-ing"><i class="glyphicon glyphicon-minus"></i></button>        
+      </div>
     </div>
 
     <!-- <div formArrayName="properties">
@@ -125,13 +128,16 @@
     </div>
   </div> -->
 
-    <div class="fields-container">
+    <div class="form-group">
     <label for="directions">Préparation</label>
     <textarea name="directions" 
-              formControlName="directions"></textarea>        
+              formControlName="directions"
+              class="form-control"></textarea>        
     </div>
-
-    <button type="submit" class="btn btn-primary">Proposer ma recette</button>
+    <div class="form-group text-center">
+      <button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-upload"></i> Proposer ma recette</button>
+      <button type="submit" class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i> Annuler</button>   
+    </div>
   </form>
 </div>
 

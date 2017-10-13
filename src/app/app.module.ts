@@ -12,6 +12,7 @@ import { RecipesListComponent } from './recipes-list/recipes-list.component';
 import { SearchComponent } from './search/search.component';
 import { RecipeAddFormComponent } from './recipe-add-form/recipe-add-form.component';
 import { FormRecipePipe } from './pipes/form-recipe.pipe';
+import { PublishDatePipe } from './pipes/publish-date.pipe';
 
 
 const routes = [
@@ -25,7 +26,8 @@ const routes = [
     RecipesListComponent,
     SearchComponent,
     RecipeAddFormComponent,
-    FormRecipePipe
+    FormRecipePipe,
+    PublishDatePipe
   ],
   imports: [
     BrowserModule,
