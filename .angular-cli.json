@@ -9,6 +9,7 @@
       "outDir": "dist",
       "assets": [
         "assets",
+        "fonts",
         "images",
         "data",
         "bootstrap",

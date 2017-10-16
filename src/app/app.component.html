@@ -1,3 +1,19 @@
-<img src="{{ logoUrl }}" alt="" style="width: 15%;">
+<div id="nav-header">
+    <div class="nav-container">
+        <div id="logo-header">
+            <img src="{{ logoUrl }}" alt="logo-only">
+            <div>{{ siteTitle }}</div>
+        </div>
+
+        <nav id="navbar-header">
+            <ul>
+                <li><a href="#" routerLink="/recettes/vegetariennes">Vegetarien</a></li>
+                <li><a href="#" routerLink="/recettes/vegan">Vegan</a></li>
+                <li><a href="#" routerLink="/proposer-une-recette">Proposer une recette</a></li>
+                <li><a href="#" routerLink="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
 
 <router-outlet></router-outlet>

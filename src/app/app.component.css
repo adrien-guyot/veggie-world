@@ -1,0 +1,86 @@
+.nav-container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+#nav-header{
+    background-color : rgba(0,0,0,0.2);
+    background-color : hsla(0,0%,0%,0.2);
+    color: White;    
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+#nav-header a{
+    text-decoration: none;
+    color: White;
+    position: relative;     
+}
+
+#nav-header a:hover{
+    color: White;
+}
+
+#nav-header a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+#nav-header a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+
+#logo-header,
+#logo-header>*{
+    float:left;
+}
+
+#logo-header{
+    font-family: 'cookitregular', sans-serif; 
+    width: 40%;
+    font-size: 4em;
+    line-height: 8rem;
+}
+
+#logo-header img{
+    width: 20%;
+    padding-right: 1.5rem;
+}
+
+#navbar-header{
+    float: right;
+    line-height: 8rem;
+    text-align: right;
+}
+
+#navbar-header ul{
+    padding: 0;
+    margin: 0;
+}
+
+#navbar-header ul li{
+    display: inline-block;
+
+}
+
+#nav-header>div.nav-container:after{
+    content: "";
+    clear: both;
+    height: 0;
+    display: block;
+    overflow: hidden;
+}

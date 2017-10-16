@@ -13,11 +13,19 @@ import { SearchComponent } from './search/search.component';
 import { RecipeAddFormComponent } from './recipe-add-form/recipe-add-form.component';
 import { FormRecipePipe } from './pipes/form-recipe.pipe';
 import { PublishDatePipe } from './pipes/publish-date.pipe';
+import { RecipeDetailsComponent } from './recipe-details/recipe-details.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 const routes = [
-  {path: '', component: HomeComponent }
-]
+  {path: '', component: HomeComponent },
+  {path: 'recettes/vegetariennes', component: RecipesListComponent },
+  {path: 'recettes/vegan', component: RecipesListComponent },
+  {path: 'proposer-une-recette', component: RecipeAddFormComponent },
+  {path: 'recettes/:id', component: RecipeDetailsComponent },
+  {path: '404', component: NotFoundComponent},
+  {path: '**', redirectTo: '/404'}
+];
 
 @NgModule({
   declarations: [
@@ -27,7 +35,9 @@ const routes = [
     SearchComponent,
     RecipeAddFormComponent,
     FormRecipePipe,
-    PublishDatePipe
+    PublishDatePipe,
+    RecipeDetailsComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

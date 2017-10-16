@@ -9,6 +9,7 @@ import * as $ from 'jquery/dist/jquery.min.js';
 
 export class AppComponent {
 
-  title = 'Veggie World';
-  logoUrl = './../assets/images/logo.png';
+  siteTitle = 'Veggie World';
+  logoUrl = './../assets/images/logo-only.png';
+  logoTitle = './../assets/images/logo-title.png';
 }

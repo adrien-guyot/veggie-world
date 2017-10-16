@@ -1,6 +1,14 @@
+h1{
+    text-transform: uppercase;
+}
+
+h4{
+    text-transform: capitalize;
+}
+
 .main-form{
     margin: 0 auto;
-    width: 80%;
+    max-width: 900px;
     background: white;
     padding: 2em;
     padding-top: 1em;
