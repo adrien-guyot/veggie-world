@@ -19,6 +19,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes = [
   {path: '', component: HomeComponent },
+  {path: 'rechercher', redirectTo: '' },
   {path: 'recettes/vegetariennes', component: RecipesListComponent },
   {path: 'recettes/vegan', component: RecipesListComponent },
   {path: 'proposer-une-recette', component: RecipeAddFormComponent },

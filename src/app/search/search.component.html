@@ -1,4 +1,9 @@
 <div class="search-input">
   <h1>Vos recettes végétariennes et vegans</h1>
-  <input type="text" [(ngModel)]="searchTerm" placeholder="Rechercher une recette">
+  <div class="search-container">
+    <div class="v-align">
+      <input type="text" [(ngModel)]="searchTerm" placeholder="Rechercher une recette">
+      <button (click)="searchRecipe()"><i class="glyphicon glyphicon-search"></i></button>
+    </div>
+  </div>
 </div>

@@ -1,3 +1,15 @@
+/* @-webkit-keyframes blink {
+    0% { color: white; }
+    50% { color: rgb(73, 182, 73) }
+    100% { color: white; }
+}
+
+@keyframes blink {
+    0% { color: white; }
+    50% { color: rgb(73, 182, 73) }
+    100% { color: white; }
+} */
+
 .nav-container{
     width: 80%;
     margin: 0 auto;
@@ -50,7 +62,7 @@
 }
 
 #logo-header{
-    font-family: 'cookitregular', sans-serif; 
+    font-family: 'VeggieLogo', sans-serif; 
     width: 40%;
     font-size: 4em;
     line-height: 8rem;
@@ -60,6 +72,11 @@
     max-width: 75px;
     padding: 10px;
 }
+
+/* #logo-header .site-title{
+    animation: blink 10s linear infinite;
+    -webkit-animation: blink 10s linear infinite;
+} */
 
 #navbar-header{
     float: right;
