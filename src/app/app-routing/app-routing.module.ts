@@ -14,28 +14,28 @@ import { NotFoundComponent } from './../not-found/not-found.component';
 const routes = [
   {
     path: '', component: HomeComponent,
-    data: { pathBg: '/assets/images/background.png', slideMode: true }
+    data: { pathBg: '/assets/images/background.png'}
   },
   { path: 'rechercher', redirectTo: '' },
   {
     path: 'recettes/vegetariennes', component: RecipesListComponent,
-    data: { pathBg: '/assets/images/background.png', slideMode: false }
+    data: { pathBg: '/assets/images/background.png'}
   },
   {
     path: 'recettes/vegan', component: RecipesListComponent,
-    data: { pathBg: '/assets/images/background.png', slideMode: false }
+    data: { pathBg: '/assets/images/background.png'}
   },
   {
     path: 'proposer-une-recette', component: RecipeAddFormComponent,
-    data: { pathBg: '/assets/images/background - recipe-form.png', slideMode: false }
+    data: { pathBg: '/assets/images/background - recipe-form.png'}
   },
   {
     path: 'recettes/:id', component: RecipeDetailsComponent,
-    data: { pathBg: '/assets/images/background.png', slideMode: false }
+    data: { pathBg: '/assets/images/background.png'}
   },
   {
     path: '404', component: NotFoundComponent,
-    data: { pathBg: '/assets/images/404.jpg', slideMode: true }
+    data: { pathBg: '/assets/images/404.jpg'}
   },
   { path: '**', redirectTo: '/404' }
 ];

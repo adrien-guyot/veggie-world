@@ -1,18 +1,26 @@
-/* @-webkit-keyframes blink {
-    0% { color: white; }
-    50% { color: rgb(73, 182, 73) }
-    100% { color: white; }
-}
-
-@keyframes blink {
-    0% { color: white; }
-    50% { color: rgb(73, 182, 73) }
-    100% { color: white; }
-} */
-
 .child-component{
-    background: url('/assets/images/background.png');    
+    background-position : center;
+    /* position: absolute;
+    height: 100%;
+    width: 100%;
+    display: table;  */
 }
+
+.slide-active{
+    background-repeat: no-repeat;
+    background-position: cover;
+}
+
+.slide-inactive{
+    background-repeat: repeat;
+    background-position: center;
+}
+
+/* ::ng-deep {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+} */
 
 .activeLink{
     text-shadow: 1px 1px 2px black;
@@ -80,11 +88,6 @@
     max-width: 75px;
     padding: 10px;
 }
-
-/* #logo-header .site-title{
-    animation: blink 10s linear infinite;
-    -webkit-animation: blink 10s linear infinite;
-} */
 
 #navbar-header{
     float: right;
