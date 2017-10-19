@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import * as $ from 'jquery/dist/jquery.min.js';
-// import { Router, NavigationStart, NavigationEnd, NavigationError, NavigationCancel, RoutesRecognized } from '@angular/router';
+import { Router, NavigationStart, NavigationEnd, Event as NavigationEvent } from '@angular/router';
 
 @Component({
   selector: 'app-vw-root',
@@ -14,14 +14,12 @@ export class AppComponent {
   logoUrl = './../assets/images/logo-only.png';
   logoTitle = './../assets/images/logo-title.png';
 
-  // constructor(router:Router) {
-  //   router.events.forEach((event) => {
-  //     if(event instanceof NavigationStart) {
-  //     }
-  //     // NavigationEnd
-  //     // NavigationCancel
-  //     // NavigationError
-  //     // RoutesRecognized
-  //   });
+  constructor(router: Router) {
+    let routerParams = router.events;
+    router.events.subscribe(path => {
+      console.log(path);
+    });
   }
+
+
 }

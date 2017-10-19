@@ -10,6 +10,14 @@
     100% { color: white; }
 } */
 
+.child-component{
+    background: url('/assets/images/background.png');    
+}
+
+.activeLink{
+    text-shadow: 1px 1px 2px black;
+}
+
 .nav-container{
     width: 80%;
     margin: 0 auto;

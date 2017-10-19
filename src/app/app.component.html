@@ -9,15 +9,17 @@
 
         <nav id="navbar-header">
             <ul>
-                <li><a href="#" routerLink="/rechercher">Rechercher</a></li>
-                <!-- <li><a href="#" routerLink="/recettes/vegetariennes">Vegetarien</a></li>
-                <li><a href="#" routerLink="/recettes/vegan">Vegan</a></li> -->
-                <li><a href="#" routerLink="/proposer-une-recette">Proposer une recette</a></li>
-                <li><a href="#" routerLink="/contact">Contact</a></li>
-                <li><a href="#" routerLink="/profil"><i class="glyphicon glyphicon-user"></i></a></li>
+                <li><a href="#" routerLink="/rechercher" routerLinkActive="activeLink">Rechercher</a></li>
+                <!-- <li><a href="#" routerLink="/recettes/vegetariennes" routerLinkActive="activeLink">Vegetarien</a></li>
+                <li><a href="#" routerLink="/recettes/vegan" routerLinkActive="activeLink">Vegan</a></li> -->
+                <li><a href="#" routerLink="/proposer-une-recette" routerLinkActive="activeLink">Proposer une recette</a></li>
+                <li><a href="#" routerLink="/contact" routerLinkActive="activeLink">Contact</a></li>
+                <li><a href="#" routerLink="/profil" routerLinkActive="activeLink"><i class="glyphicon glyphicon-user"></i></a></li>
             </ul>
         </nav>
     </div>
 </div>
 
-<router-outlet></router-outlet>
+<div class="child-component">
+    <router-outlet></router-outlet>    
+</div>
