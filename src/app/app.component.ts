@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   logoTitle = './../assets/images/logo-title.png';
   innerHeight: any;
   backgroundRouter: any;
-
+  photo: any;
   ngOnInit() {
   }
 
@@ -25,34 +25,49 @@ export class AppComponent implements OnInit {
 
     // On écoute les évènements émis par le router
     router.events.forEach((event: NavigationEvent) => {
-      // Après Navigation
+      // Après Navigation, on va écouter l'évènement de la navigation
+      // pour déterminer quelle est l'urlAfterRedirects
+      // On peut ainsi changer le background proprement en fonction de l'url réellement dans l'adresse
       if (event instanceof NavigationEnd) {
-        console.log(event.url);
-        switch (event.url) {
+        console.log(event);
+        switch (event.urlAfterRedirects) {
           case '/rechercher':
             {
-            this.backgroundRouter = { url: './../assets/images/veggie-world-background.jpg', sliderMode: true };
+            this.backgroundRouter = './../assets/images/veggie-world-background.jpg';
+            this.photo = `url(${this.backgroundRouter})`;
+            //this.innerHeight = sliderMode: true };
               break;
             }
           case '/contact':
             {
-              this.backgroundRouter = { url: './../assets/images/background-contact-form.png', sliderMode: false };
+              this.backgroundRouter = './../assets/images/background-contact-form.png';
+              this.photo = `url(${this.backgroundRouter})`;
+              // sliderMode: false };
               break;
             }
           case '/home':
             {
-              this.backgroundRouter = { url: './../assets/images/veggie-world-background.jpg', sliderMode: true };
+              this.backgroundRouter = './../assets/images/veggie-world-background.jpg';
+              this.photo = `url(${this.backgroundRouter})`;
+              //, sliderMode: true };
               break;
             }
           case '/404':
             {
-              this.backgroundRouter = { url: './../assets/images/404.jpg', sliderMode: true };
+
+              console.log('sa mère chui 404');
+              this.backgroundRouter = './../assets/images/404.jpg';
+              this.photo = `url(${this.backgroundRouter})`;
+              //, sliderMode: true };
               break;
             }
           default:
             // Instructions à exécuter lorsqu'aucune des valeurs ne correspond 
             {
-            this.backgroundRouter = { url: './../assets/images/background-contact-form.png', sliderMode: false };
+            this.backgroundRouter = './../assets/images/background-contact-form.png';
+            //, sliderMode: false };
+            this.photo = `url(${this.backgroundRouter})`;
+
               break;
             }
         }

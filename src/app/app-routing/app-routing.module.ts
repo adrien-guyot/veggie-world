@@ -13,29 +13,23 @@ import { NotFoundComponent } from './../not-found/not-found.component';
 // si la div parent doit occuper la totalité de la hauteur de la fenêtre
 const routes = [
   {
-    path: '', component: HomeComponent,
-    data: { pathBg: '/assets/images/background.png'}
+    path: '', component: HomeComponent
   },
   { path: 'rechercher', redirectTo: '' },
   {
-    path: 'recettes/vegetariennes', component: RecipesListComponent,
-    data: { pathBg: '/assets/images/background.png'}
+    path: 'recettes/vegetariennes', component: RecipesListComponent
   },
   {
-    path: 'recettes/vegan', component: RecipesListComponent,
-    data: { pathBg: '/assets/images/background.png'}
+    path: 'recettes/vegan', component: RecipesListComponent
   },
   {
-    path: 'proposer-une-recette', component: RecipeAddFormComponent,
-    data: { pathBg: '/assets/images/background - recipe-form.png'}
+    path: 'proposer-une-recette', component: RecipeAddFormComponent
   },
   {
-    path: 'recettes/:id', component: RecipeDetailsComponent,
-    data: { pathBg: '/assets/images/background.png'}
+    path: 'recettes/:id', component: RecipeDetailsComponent
   },
   {
-    path: '404', component: NotFoundComponent,
-    data: { pathBg: '/assets/images/404.jpg'}
+    path: '404', component: NotFoundComponent
   },
   { path: '**', redirectTo: '/404' }
 ];
@@ -43,7 +37,7 @@ const routes = [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
   ],
   exports: [
     RouterModule
